@@ -2,6 +2,7 @@ local Job = require("plenary.job")
 local M = {}
 
 local function candidates(input, callback)
+	input = input:gsub("^%s*", "")  -- remove leading whitespace from input
 	if input == "" then
 		return
 	end
